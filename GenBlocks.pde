@@ -31,10 +31,9 @@ class GenBlocks {
         if (blockPos[i][j].broken == false && 
           circleRect(ball.bPosX, ball.bPosY, ball.radius, blockPos[i][j].xPos, blockPos[i][j].yPos, block.blockWidth, block.blockHeight)) {
           blockPos[i][j].broken = true;
-
-          //ball bounce code needs to be added here
-
-          ball.direction = 270;
+          
+          ball.direction = 360 - ball.direction;
+          return;
         }
       }
     }
